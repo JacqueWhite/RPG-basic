@@ -11,6 +11,27 @@ function character(name, prof, gend, age, str, hp) {
 			console.log("Name: " + this.name + "\nProfession: " + this.prof + "\nGender: " + this.gend + "\nAge: " + this.age + "\nStrength: " + this.str + "\nHP: " + this.hp + "\n");
 		// }
 		}
+
+
+	this.isAlive = function() {
+		if (this.hp > 0) {
+			console.log(this.name + " is still alive!");
+			console.log("\n-------------\n");
+			return true;
+		}
+		console.log(this.name + " has died!");
+		return false;
+	};
+
+	this.levelUp = function() {
+		this.age += 1;
+		this.strenth += 5;
+		this.hp += 25;
+	};
+
+	this.attack = function() {
+		
+	};
 }
 
 //create a new object, and give it a values
